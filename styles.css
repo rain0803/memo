@@ -1,0 +1,150 @@
+:root {
+  color-scheme: light;
+  font-family: "Inter", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f6f7fb;
+  color: #1f2937;
+}
+
+header {
+  padding: 1rem 1.5rem;
+  background: #1e3a8a;
+  color: #fff;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+header p {
+  margin: 0.4rem 0 0;
+  opacity: 0.95;
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 1rem;
+  padding: 1rem;
+  height: calc(100vh - 96px);
+}
+
+#map {
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 420px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.panel {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+  overflow: auto;
+}
+
+.panel h2 {
+  margin-top: 0;
+}
+
+#memo-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.memo-item {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 0.7rem;
+  background: #fcfcff;
+}
+
+.memo-item p {
+  margin: 0 0 0.4rem;
+  white-space: pre-wrap;
+}
+
+.memo-meta {
+  font-size: 0.82rem;
+  color: #6b7280;
+}
+
+.memo-actions {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: end;
+}
+
+.memo-actions button {
+  border: none;
+  border-radius: 8px;
+  background: #dc2626;
+  color: white;
+  padding: 0.35rem 0.6rem;
+  cursor: pointer;
+}
+
+#memo-dialog {
+  border: none;
+  border-radius: 12px;
+  padding: 0;
+  width: min(420px, 92vw);
+}
+
+#memo-form {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+#memo-text {
+  width: 100%;
+  padding: 0.5rem;
+}
+
+.actions {
+  display: flex;
+  justify-content: end;
+  gap: 0.6rem;
+}
+
+.actions button {
+  border: none;
+  padding: 0.5rem 0.8rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+#cancel-btn {
+  background: #e5e7eb;
+}
+
+.actions button[type="submit"] {
+  background: #2563eb;
+  color: white;
+}
+
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  #map {
+    height: 60vh;
+  }
+}
